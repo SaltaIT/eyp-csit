@@ -10,7 +10,7 @@ define csit::preinstallscript (
                               ) {
   include ::csit
 
-  file { "${csit::srcdir}/preinstall-${pkgname}":
+  file { "${::csit::srcdir}/preinstall-${pkgname}":
     ensure  => $ensure,
     owner   => $owner,
     group   => $group,
@@ -23,7 +23,7 @@ define csit::preinstallscript (
   if($ensure=='present')
   {
     exec { "preinstall script ${pkgname}":
-      command => "${csit::srcdir}/preinstall-${pkgname}",
+      command => "${::csit::srcdir}/preinstall-${pkgname}",
       creates => $creates,
       require => File["${csit::srcdir}/preinstall-${pkgname}"],
       tag     => "preinstallscript-${pkgname}",
