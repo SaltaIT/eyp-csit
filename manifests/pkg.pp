@@ -1,5 +1,5 @@
 define csit::pkg(
-                  $pgkname  = $name,
+                  $pkgname  = $name,
                   $ensure   = 'installed',
                   $source   = undef,
                   $provider = undef,
