@@ -1,3 +1,3 @@
 #!/bin/bash
 
-touch /usr/local/src/demo.installed
+touch /usr/local/src/preinstall-csitdemo.installed
