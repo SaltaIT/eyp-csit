@@ -22,12 +22,11 @@ define csit::pkg(
   if($content!=undef)
   {
     file { "${::csit::srcdir}/pkg-${pkgname}.${repoprovider}":
-      ensure  => $ensure,
-      owner   => $owner,
-      group   => $group,
-      mode    => $mode,
-      source  => $source,
-      replace => $replace,
+      ensure  => 'present',
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0640',
+      content => $content,
       require => Class['::csit'],
     }
 
