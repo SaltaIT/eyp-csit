@@ -5,7 +5,7 @@ define csit::pkg(
                   $content  = undef,
                   $provider = undef,
                 ) {
-  include ::cist
+  include ::csit
 
   case $::osfamily
   {
