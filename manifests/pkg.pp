@@ -51,6 +51,7 @@ define csit::pkg(
   }
 
   Exec <| tag == "preinstallscript-${pkgname}" |> ->
-  Package[$pkgname]
+  Package[$pkgname] ->
+  Exec <| tag == "postinstallscript-${pkgname}" |>
 
 }
