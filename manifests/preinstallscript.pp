@@ -1,11 +1,12 @@
 define csit::preinstallscript (
                                 $pkgname = $name,
-                                $ensure = 'present',
+                                $ensure  = 'present',
                                 $replace = true,
                                 $owner   = 'root',
                                 $group   = 'root',
                                 $mode    = '0755',
                                 $source  = undef,
+                                $content = content,
                                 $content = undef,
                                 $creates = "${csit::srcdir}/preinstall-${pkgname}.installed",
                               ) {
@@ -17,6 +18,7 @@ define csit::preinstallscript (
     group   => $group,
     mode    => $mode,
     source  => $source,
+    content => $content,
     replace => $replace,
     require => Class['::csit'],
   }
