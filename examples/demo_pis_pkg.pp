@@ -1,4 +1,4 @@
 
-cist::pkg { 'cistdemo':
-  source => file('csit/demo/cistdemo-3.14.15_926_53_59-1.noarch.rpm'),
+cist::pkg { 'csitdemo':
+  source => file('csit/demo/csitdemo-3.14.15_926_53_59-1.noarch.rpm'),
 }
