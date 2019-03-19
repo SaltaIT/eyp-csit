@@ -7,7 +7,7 @@ define csit::postinstallscript(
                                 $mode    = '0755',
                                 $source  = undef,
                                 $content = undef,
-                                $creates = "${csit::srcdir}/preinstall-${pkgname}.installed",
+                                $creates = "${csit::srcdir}/postinstall-${pkgname}.installed",
                               ) {
   include ::csit
 
