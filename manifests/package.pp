@@ -9,4 +9,8 @@ define csit::pkg(
     source   => $source,
     provider => $provider,
   }
+
+  Exec <| tag == "preinstallscript-${pkgname}" |> ->
+  Package[$pkgname]
+
 }
