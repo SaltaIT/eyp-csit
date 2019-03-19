@@ -1,11 +1,12 @@
 define csit::preinstallscript (
-                                $source,
                                 $pkgname = $name,
                                 $ensure = 'present',
                                 $replace = true,
                                 $owner   = 'root',
                                 $group   = 'root',
                                 $mode    = '0755',
+                                $source  = undef,
+                                $content = undef,
                                 $creates = "${csit::srcdir}/preinstall-${pkgname}.installed",
                               ) {
   include ::csit
