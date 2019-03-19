@@ -17,6 +17,10 @@ define csit::pkg(
     {
       $repoprovider = 'dpkg'
     }
+    default:
+    {
+      $repoprovider = 'rpm'
+    }
   }
 
   if($content!=undef)
