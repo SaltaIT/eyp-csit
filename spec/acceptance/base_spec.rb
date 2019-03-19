@@ -4,7 +4,7 @@ require_relative './version.rb'
 describe 'csit class' do
 
   context 'basic setup' do
-    # Using puppet_apply as a helper
+
     it 'should work with no errors' do
       pp = <<-EOF
 
