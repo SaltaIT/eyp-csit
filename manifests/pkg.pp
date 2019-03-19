@@ -35,6 +35,7 @@ define csit::pkg(
       ensure   => $ensure,
       source   => "${::csit::srcdir}/pkg-${pkgname}.${repoprovider}",
       provider => $repoprovider,
+      require  => File["${::csit::srcdir}/pkg-${pkgname}.${repoprovider}"],
     }
   }
   else
