@@ -26,7 +26,6 @@ custom package installation with optional pre and post installation script execu
 * **csit::preinstallscript**: exection of a given script before installing **csit::pkg** (pkgname must match)
 * **csit::postinstallscript**: exection of a given script after installing **csit::pkg** (pkgname must match)
 
-
 ## Setup
 
 ### What csit affects
