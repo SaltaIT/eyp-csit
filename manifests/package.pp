@@ -5,7 +5,7 @@ define csit::pkg(
                   $provider = undef,
                 ) {
   package { $pkgname:
-    ensure => $ensure,
+    ensure   => $ensure,
     source   => $source,
     provider => $provider,
   }
