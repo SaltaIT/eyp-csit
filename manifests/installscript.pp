@@ -31,4 +31,9 @@ define csit::installscript(
       tag     => "installscript-${pkgname}",
     }
   }
+
+  Exec <| tag == "preinstallscript-${pkgname}" |> ->
+  Exec <| tag == "installscript-${pkgname}" |> ->
+  Exec <| tag == "postinstallscript-${pkgname}" |> ->
+  Exec <| tag == "service-${pkgname}" |>
 }
