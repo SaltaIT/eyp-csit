@@ -11,6 +11,11 @@ define csit::postinstallscript(
                               ) {
   include ::csit
 
+  if($source==undef and $content==undef)
+  {
+    fail("csit::postinstallscript(${pkgname}): either source or content must be defined")
+  }
+
   file { "${::csit::srcdir}/postinstall-${pkgname}":
     ensure  => $ensure,
     owner   => $owner,

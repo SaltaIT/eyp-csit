@@ -3,7 +3,6 @@ define csit::pkg(
                   $ensure   = 'installed',
                   $source   = undef,
                   $content  = undef,
-                  $provider = undef,
                 ) {
   include ::csit
 
@@ -21,6 +20,11 @@ define csit::pkg(
     {
       $repoprovider = 'rpm'
     }
+  }
+
+  if($source==undef and $content==undef)
+  {
+    fail("csit::pkg(${pkgname}): either source or content must be defined")
   }
 
   file { "${::csit::srcdir}/pkg-${pkgname}.${repoprovider}":
