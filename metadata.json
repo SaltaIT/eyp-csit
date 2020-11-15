@@ -1,15 +1,15 @@
 {
   "name": "eyp-csit",
-  "version": "0.1.2",
-  "author": "eyp",
+  "version": "1.0.2",
+  "author": "Jordi Prats",
   "summary": "CuStom Installation Tool",
   "license": "Apache-2.0",
-  "source": "https://github.com/NTTCom-MS/eyp-csit",
-  "project_page": "https://github.com/NTTCom-MS/eyp-csit",
-  "issues_url": "https://github.com/NTTCom-MS/eyp-csit/issues",
+  "source": "https://github.com/SaltaIT/eyp-csit",
+  "project_page": "https://github.com/SaltaIT/eyp-csit",
+  "issues_url": "https://github.com/SaltaIT/eyp-csit/issues",
   "dependencies": [
     {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0 < 9.9.9"},
-    {"name":"eyp/eyplib","version_requirement":">= 0.1.0 < 0.2.0"}
+    {"name":"eyp/eyplib","version_requirement":">= 1.0.0 < 2.0.0"}
   ],
   "operatingsystem_support": [
     {
@@ -44,7 +44,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 3.8.0"
+      "version_requirement": ">= 4.0.0"
     }
   ]
 }
